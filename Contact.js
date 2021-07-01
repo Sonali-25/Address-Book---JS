@@ -91,5 +91,13 @@ class Contact {
     }
 }
 
-let contact = new Contact("Amit", "Shah", "patna", 'PATNA', 'BIHAR', '852014', '78541232', 'amit@gmail.com');
-console.log(contact)
+//UC-3
+let addressbook = new Array();
+  
+  let contact=new Contact("Amit","Shah","patna",'PATNA','BIHAR','852014','78541232','amit@gmail.com');
+  addressbook.push(contact.toString())
+  
+  let contact1=new Contact("Siddharth","Ranjan","Hajipur",'Delhi','New-Delhi','855414','785576315','sid41@gmail.com');
+  addressbook.push(contact1.toString())
+  
+  console.log("Addressbook : "+addressbook)
