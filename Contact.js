@@ -101,3 +101,7 @@ let addressbook = new Array();
   addressbook.push(contact1.toString())
   
   console.log("Addressbook : "+addressbook)
+
+  //UC-4
+  let searchResult = addressbook.find( firstName => firstName="Amit" )
+console.log("Searched Contact"+searchResult)
