@@ -140,4 +140,10 @@ console.log(addressbook.filter(contact => contact.city == "PATNA")
     .map(contact => contact.firstName))
 
 console.log(addressbook.filter(contact => contact.state == "BIHAR")
-     .map(contact => contact.firstName))
+    .map(contact => contact.firstName))
+//UC-10
+console.log("\nCount by City PATNA : " + addressbook.filter(contact => contact.city == "PATNA")
+    .reduce((count, contact) => contact.firstName ? ++count : count, 0))
+
+console.log("Count by State BIHAR: " + addressbook.filter(contact => contact.state == "BIHAR")
+    .reduce((count, contact) => contact.firstName ? ++count : count, 0))
