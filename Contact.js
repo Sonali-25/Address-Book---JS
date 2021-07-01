@@ -134,3 +134,10 @@ console.log("Contacts by city: ", findByCity);
 
 let findByState = addressbook.filter((e) => e.state == 'BIHAR');
 console.log("Contacts by state: ", findByState);
+
+//Uc-9
+console.log(addressbook.filter(contact => contact.city == "PATNA")
+    .map(contact => contact.firstName))
+
+console.log(addressbook.filter(contact => contact.state == "BIHAR")
+     .map(contact => contact.firstName))
