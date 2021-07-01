@@ -93,15 +93,25 @@ class Contact {
 
 //UC-3
 let addressbook = new Array();
-  
-  let contact=new Contact("Amit","Shah","patna",'PATNA','BIHAR','852014','78541232','amit@gmail.com');
-  addressbook.push(contact.toString())
-  
-  let contact1=new Contact("Siddharth","Ranjan","Hajipur",'Delhi','New-Delhi','855414','785576315','sid41@gmail.com');
-  addressbook.push(contact1.toString())
-  
-  console.log("Addressbook : "+addressbook)
+try {
+    let contact1 = new Contact("Amit", "Shah", "patna", 'PATNA', 'BIHAR', '852014', '78541232', 'amit@gmail.com')
+    let contact2 = new Contact("Sonali", "Jha", "patna", 'PATNA', 'BIHAR', '852014', '78541232', 'amit@gmail.com')
+    addressbook.push(contact1);
+    addressbook.push(contact2);
+    addressbook.push(contact)
+}
+catch (e) {
+    console.error(e);
+}
+console.log("\nAddressbook")
+console.log(addressbook);
 
-  //UC-4
-  let searchResult = addressbook.find( firstName => firstName="Amit" )
-console.log("Searched Contact"+searchResult)
+//UC4-Find 
+function findFirstName(contact) {
+    return contact.firstName.includes("Amit")
+}
+console.log(addressbook.find(findFirstName))
+
+//UC-5 
+addressbook = addressbook.filter((e) => e.firstName != 'Amit');
+console.log("Array After Deleting Contact: ", addressbook);
