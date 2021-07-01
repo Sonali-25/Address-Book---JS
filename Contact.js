@@ -147,3 +147,7 @@ console.log("\nCount by City PATNA : " + addressbook.filter(contact => contact.c
 
 console.log("Count by State BIHAR: " + addressbook.filter(contact => contact.state == "BIHAR")
     .reduce((count, contact) => contact.firstName ? ++count : count, 0))
+
+//UC-11
+console.log("Sorted Addressbook")
+console.log(addressbook.sort((a, b) => a.firstName.localeCompare(b.firstName)));
