@@ -119,3 +119,12 @@ console.log("Array After Deleting Contact: ", addressbook);
 //UC-6
 let numOfContacts = addressbook.length;
 console.log("\nNumber of Contacts in the AddressBook: "+numOfContacts);
+
+//UC-7
+let contact3 = new Contact("Amit","Shah","patna",'PATNA','BIHAR','852014','78541232','amit@gmail.com')
+    if(!addressbook.some(el => el.firstname != "Amit"))
+        addressbook.push(contact3);
+    else
+      console.log("Contact already Exists!");
+
+    console.log("Array: ",addressbook);
