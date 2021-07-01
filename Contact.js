@@ -151,3 +151,11 @@ console.log("Count by State BIHAR: " + addressbook.filter(contact => contact.sta
 //UC-11
 console.log("Sorted Addressbook")
 console.log(addressbook.sort((a, b) => a.firstName.localeCompare(b.firstName)));
+
+//UC-12
+console.log("Contact After sorting by city");
+console.log(addressbook.sort((a, b) => a.city.localeCompare(b.city)))
+console.log("Contact After sorting by state");
+console.log(addressbook.sort((a, b) => a.state.localeCompare(b.state)));
+console.log("Contact After sorting by zip");
+console.log(addressbook.sort((a, b) => a.zip.localeCompare(b.zip)));
