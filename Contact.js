@@ -98,7 +98,6 @@ try {
     let contact2 = new Contact("Sonali", "Jha", "patna", 'PATNA', 'BIHAR', '852014', '78541232', 'amit@gmail.com')
     addressbook.push(contact1);
     addressbook.push(contact2);
-    addressbook.push(contact)
 }
 catch (e) {
     console.error(e);
@@ -118,13 +117,20 @@ console.log("Array After Deleting Contact: ", addressbook);
 
 //UC-6
 let numOfContacts = addressbook.length;
-console.log("\nNumber of Contacts in the AddressBook: "+numOfContacts);
+console.log("\nNumber of Contacts in the AddressBook: " + numOfContacts);
 
 //UC-7
-let contact3 = new Contact("Amit","Shah","patna",'PATNA','BIHAR','852014','78541232','amit@gmail.com')
-    if(!addressbook.some(el => el.firstname != "Amit"))
-        addressbook.push(contact3);
-    else
-      console.log("Contact already Exists!");
+let contact3 = new Contact("Amit", "Shah", "patna", 'PATNA', 'BIHAR', '852014', '78541232', 'amit@gmail.com')
+if (!addressbook.some(el => el.firstname != "Amit"))
+    addressbook.push(contact3);
+else
+    console.log("Contact already Exists!");
 
-    console.log("Array: ",addressbook);
+console.log("Array: ", addressbook);
+
+//UC-8
+let findByCity = addressbook.filter((e) => e.city == 'PATNA');
+console.log("Contacts by city: ", findByCity);
+
+let findByState = addressbook.filter((e) => e.state == 'BIHAR');
+console.log("Contacts by state: ", findByState);
