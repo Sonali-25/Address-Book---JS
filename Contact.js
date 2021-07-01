@@ -115,3 +115,7 @@ console.log(addressbook.find(findFirstName))
 //UC-5 
 addressbook = addressbook.filter((e) => e.firstName != 'Amit');
 console.log("Array After Deleting Contact: ", addressbook);
+
+//UC-6
+let numOfContacts = addressbook.length;
+console.log("\nNumber of Contacts in the AddressBook: "+numOfContacts);
